@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "2";
+const prefix = "3";
 /////////////////////////
 ////////////////////////
 
@@ -325,13 +325,14 @@ client.on('message', message => {
         .addField('resume', 'تكملة الاغنية')
         .addField('queue', 'اظهار قائمة التشغيل')
         .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا')
-        .setFooter('(general_commands) لاظهار الاوامر العامة')
+        .addField('vol','تخفيض و رفع الصوت')
+	.setFooter('(3general_commands) لاظهار الاوامر العامة')
       message.channel.send(helpEmbed);
     }
 });
 
 client.on('message', message => {
-    if (message.content === 'general_commands') {
+    if (message.content === '3general_commands') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر عامة...**')
         .addField('avatar', "افاتار الشخص المطلوب")
@@ -349,7 +350,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`1play | Last Music`,"http://twitch.tv/Death Shop")
+client.user.setGame(`3play | Last Music`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
